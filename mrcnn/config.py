@@ -153,6 +153,9 @@ class Config(object):
     POOL_SIZE = 7
     MASK_POOL_SIZE = 14
 
+    # Number of deconvolution at the end of the FPN
+    FPN_NUM_DECONV = 1
+
     # Shape of output mask
     # To change this you also need to change the neural network mask branch
     MASK_SHAPE = [28, 28]
