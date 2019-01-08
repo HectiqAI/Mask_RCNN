@@ -184,6 +184,10 @@ class Config(object):
     LEARNING_RATE = 0.001
     LEARNING_MOMENTUM = 0.9
 
+    MAX_QUEUE_SIZE = 8 
+    USE_MULTIPROCESSING = False
+
+    
     # Weight decay regularization
     WEIGHT_DECAY = 0.0001
 
