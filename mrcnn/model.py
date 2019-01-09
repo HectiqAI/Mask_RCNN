@@ -2477,7 +2477,7 @@ class MaskRCNN():
         full_masks = []
         for i in range(N):
             # Convert neural network mask to full size mask
-            full_mask = utils.unmold_mask(masks[i], boxes[i], original_image_shape)
+            full_mask = utils.unmold_mask(masks[i], boxes[i], original_image_shape, threshold=self.config.MASK_DETECTION_THRESHOLD)
             full_masks.append(full_mask)
         full_masks = np.stack(full_masks, axis=-1)\
             if full_masks else np.empty(original_image_shape[:2] + (0,))

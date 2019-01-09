@@ -103,6 +103,11 @@ class Config(object):
     USE_MINI_MASK = True
     MINI_MASK_SHAPE = (56, 56)  # (height, width) of the mini-mask
 
+
+    # In inference, accept a pixel if mask_detection is larger than a threshold
+    MASK_DETECTION_THRESHOLD = 0.5
+
+
     # Input image resizing
     # Generally, use the "square" resizing mode for training and predicting
     # and it should work well in most cases. In this mode, images are scaled
